@@ -1,0 +1,105 @@
+/* -----------------------------------Desktop View---------------------------------- */
+header{
+    display: flex;
+    align-items: center;
+    padding: 0 6vw;
+    height: 10vh;
+    border-bottom: 2px solid hsl(220, 14%, 75%);
+}
+h4{
+    font-size: 1vw;
+    font-weight: 400;
+}
+.header_right{
+    display: flex;
+}
+/* Every elements of the header  */
+.header_categories{
+    display: flex;
+    gap: 2vw;
+    justify-content: space-between;
+    width: 100vw;
+    align-items: center;
+    padding: 0 1vw;
+}
+
+/* left buttons of the header  */
+#header_tabs{
+    display: flex;
+    justify-content: space-;
+    gap: 2vw;
+    margin: 2vw;
+    color: hsl(220, 14%, 75%);
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+/* The right buttons/icons of the header  */
+.header_icons{
+    justify-content: center;
+}
+
+.avatar_icon{
+    height: 4vh;
+    padding-left: 2vw;
+    justify-content: center;
+}
+
+
+/* Header Spacer -> the space below the header*/
+
+#headerspacer{
+    height: 3vh;
+}
+.menu_icon {
+    visibility: hidden;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1vw;
+}
+.side_drawer{
+    visibility: hidden;
+    
+}
+/* -----------------------------------Mobile View---------------------------------------- */
+
+@media (max-width: 768px) {
+    .header_categories #header_tabs {
+        display: none;
+    }
+
+    .menu_icon {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: visible;
+    }
+
+    /* Side Drawer Styles */
+    .side_drawer {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background-color: white;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        transition: transform 0.3s ease;
+        transform: translateX(-100%);
+    }
+
+    .side_drawer.open {
+        display: block;
+        transform: translateX(0);
+    }
+
+    .side_drawer_content h4 {
+        padding: 15px;
+        border-bottom: 1px solid #ccc;
+    }
+}

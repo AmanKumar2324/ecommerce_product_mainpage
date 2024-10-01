@@ -1,54 +1,50 @@
+
+/*
 *{
     margin: 0%;
     padding: 0%;
-}
-
+} */
+/*
 html,body{
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-}
-
+} */
+/* 
 .main{
     height: 100%;
     width: 100%;
     font-family: "Kumbh Sans", sans-serif;
-    /* font-optical-sizing: auto; */
-    /* font-style: normal; */
-    /* font-variation-settings:"YOPQ" 300; */
-}
-
+} */
+/* ------------------------------------Header------------------------------------------ */
 /* Header code */
 
-header{
+/* header{
     display: flex;
-    /* background-color: aqua; */
     align-items: center;
     padding: 0 6vw;
     height: 10vh;
     border-bottom: 2px solid hsl(220, 14%, 75%);
 }
-h1{
-    /* font-size: 7vw; */
+h4{
     font-size: 1vw;
-
-    
+    font-weight: 400;
 }
 .header_right{
     display: flex;
-}
-
-.header_categories{
+} */
+/* Every elements of the header  */
+/* .header_categories{
     display: flex;
     gap: 2vw;
     justify-content: space-between;
-    /* background-color: red; */
     width: 100vw;
     align-items: center;
-    padding: 2vw 0;
+    padding: 0 1vw;
+} */
 
-}
-#header_tabs{
+/* left buttons of the header  */
+/* #header_tabs{
     display: flex;
     justify-content: space-;
     gap: 2vw;
@@ -56,64 +52,71 @@ h1{
     color: hsl(220, 14%, 75%);
     font-weight: lighter;
     cursor: pointer;
-}
+} */
 
-.header_icons{
+/* The right buttons/icons of the header  */
+/* .header_icons{
     justify-content: center;
 }
 
 .avatar_icon{
     height: 4vh;
-    /* width: 3vw; */
-    padding-left: 4vw;
+    padding-left: 2vw;
     justify-content: center;
-}
+} */
 
-/* Header Spacer */
 
-#headerspacer{
-    height: 8vh;
-    /* background-color: red; */
-}
+/* Header Spacer -> the space below the header*/
 
+/* #headerspacer{
+    height: 3vh;
+} */
+
+/* Mobile view of page  */
+/* .menu_icon{
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 0 1vw;
+} */
+
+/* ----------------------------------Setting Product Content Architecture - Left and Right Content--------------------------------------------- */
 /* Product Content */
 
-.product_content{
+/* .product_content{
     display: flex;
     height: calc(100vh - 19vh);
-    /* background-color: antiquewhite; */
     justify-content: center;
     align-items: center;
     padding: 0 10vw;
-}
-/* ----------------------------------Setting Left and Right Content--------------------------------------------- */
+} */
+
 /*Product_content: Left side of the product content that is the displayed image section */
 
-#left_content{
+/* #left_content{
     display: flex;
     align-items: center;
     margin: 0 2vw;
-    /* background-color: rgb(45, 218, 218); */
     width: 35%;
     flex-direction: column;
     height: 80%;
-}
+} */
 /* Product_Content: The right side of the product content that is the description of teh product */
 
-#right_content{
+/* #right_content{
     align-items: center;
     margin: 0 2vw;
-    /* background-color: rgb(135, 53, 127); */
     width: 30%;
     height: 80%;
     
-}
+} */
 
 /* ---------------------------------Left Content------------------------------------------------------------------------- */
 
 /* left Content: The displayed image */
-.selected_image{
-    height: 75%;
+/* .selected_image{
+    height: 75vh;
     width: 80%;
     background-color: crimson;
     margin: 1vh;
@@ -139,42 +142,42 @@ h1{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     margin: 0 0.5vh;
     cursor: pointer;
-}
+} */
 
 /* ----------------------------------Right Content---------------------------------------- */
 
-#right_content{
+/* #right_content{
     align-items: start;
     justify-content: center;
     flex-direction: column;
     display: flex;
-}
+} */
 /* company name */
-#comp_name{
+/* #comp_name{
     font-weight: 600;
     font-size: 0.8vw;
     color: hsl(219, 9%, 45%);
     padding: 1vh;
-}
+} */
 
 /* product tag */
-#product_tag{
+/* #product_tag{
     font-weight: 600;
     font-size: 2.2vw;
     padding: 1vh;
     font-family: "Kumbh Sans", sans-serif;
-}
+} */
 
 /* product description */
-#product_description{
+/* #product_description{
     font-weight: 300;
     font-size: 1vw;
     color: hsl(219, 9%, 45%);
     padding: 1vh;
-}
+} */
 
 /* Price row  */
-#prices{
+/* #prices{
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -199,9 +202,10 @@ h1{
     padding-left: 0.8vh;
     text-decoration: line-through;
 
-}
+} */
 
 /* Cart Feature */
+/* 
 #cart_feature{
     display: flex;
     flex-direction: row;
@@ -258,6 +262,23 @@ h1{
     font-size: 1vw;
     font-weight: 600;
     margin-left: 0.5vw;
+} */
+
+/* Resetting Properties */
+*{
+    margin: 0;
+    padding: 0;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
 
+/* Global Properties */
+.main {
+    height: 100%;
+    width: 100%;
+    font-family: "Kumbh Sans", sans-serif;
+}

@@ -1,0 +1,28 @@
+.product_content{
+    display: flex;
+    height: calc(100vh - 19vh);
+    justify-content: center;
+    align-items: center;
+    padding: 0 10vw;
+}
+
+/*Product_content: Left side of the product content that is the displayed image section */
+
+#left_content{
+    display: flex;
+    align-items: center;
+    margin: 0 2vw;
+    width: 35%;
+    flex-direction: column;
+    height: 80%;
+}
+/* Product_Content: The right side of the product content that is the description of teh product */
+
+#right_content{
+    align-items: center;
+    margin: 0 2vw;
+    /* background-color: rgb(135, 53, 127); */
+    width: 30%;
+    height: 80%;
+    
+}
