@@ -6,6 +6,10 @@ header{
     height: 10vh;
     border-bottom: 2px solid hsl(220, 14%, 75%);
 }
+header h2{
+    font-size: 2vw;
+    font-family: "Kumbh Sans";
+}
 h4{
     font-size: 1vw;
     font-weight: 400;
@@ -25,6 +29,7 @@ h4{
 
 /* left buttons of the header  */
 #header_tabs{
+    position: relative;
     display: flex;
     justify-content: space-;
     gap: 2vw;
@@ -33,10 +38,25 @@ h4{
     font-weight: lighter;
     cursor: pointer;
 }
+.underline {
+    position: absolute;
+    bottom: -5px; /* Adjust as needed */
+    left: 0;
+    height: 2px; /* Height of the underline */
+    width: 0; /* Start with no width */
+    background-color: orange; /* Color of the underline */
+    transition: width 0.3s ease, left 0.9s ease; /* Smooth transition */
+}
+#header_tabs h4:hover {
+    color: hsl(219, 9%, 45%) ; 
+}
 
-/* The right buttons/icons of the header  */
 .header_icons{
     justify-content: center;
+}
+.cart_icon{
+    height: 1.5vw;
+
 }
 
 .avatar_icon{
@@ -45,6 +65,34 @@ h4{
     justify-content: center;
 }
 
+.side_drawer {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1000; /* Sit on top */
+}
+
+.side_drawer.open {
+    left: 0; /* Slide in */
+}
+.drawer-content {
+    padding: 20px;
+}
+
+#closeDrawer {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
 
 /* Header Spacer -> the space below the header*/
 
@@ -65,41 +113,43 @@ h4{
 }
 /* -----------------------------------Mobile View---------------------------------------- */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .header_categories #header_tabs {
         display: none;
     }
-
+    #header_tabs {
+        display: none; /* Hide header tabs on small screens */
+    }
+    header h2{
+        font-size: 7vw;
+        font-family: "Kumbh Sans";
+    }
     .menu_icon {
         cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        visibility: visible;
-    }
-
-    /* Side Drawer Styles */
-    .side_drawer {
-        display: none;
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 250px;
-        height: 100%;
-        background-color: white;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-        z-index: 1000;
-        transition: transform 0.3s ease;
-        transform: translateX(-100%);
-    }
-
-    .side_drawer.open {
         display: block;
-        transform: translateX(0);
+        visibility: visible;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding-right: 5vw;
+        height: 5vw;
+    }
+    .cart_icon{
+        height: 5.5vw;
+        padding-right: 2vw;
+    
+    }
+    .side_drawer {
+        left: -250px; /* Ensure it's hidden */
+    }
+    .side_drawer.open {
+        left: 0; /* Show the side drawer */
+    }
+    .header_icons {
+        display: flex;
+        align-items: center; /* Center icons vertically */
+        justify-content: flex-end; /* Align icons to the right */
+        margin-left: auto; /* This ensures the icons are pushed to the right */
     }
 
-    .side_drawer_content h4 {
-        padding: 15px;
-        border-bottom: 1px solid #ccc;
-    }
 }

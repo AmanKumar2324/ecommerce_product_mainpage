@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let quantity = 1; // Default value
 
-    // Update the quantity display
+    // Updating the quantity display
     const updateQuantityDisplay = function () {
         itemQuantity.textContent = quantity;
     };
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add event listener for the remove button
     removeButton.addEventListener("click", function () {
         if (quantity > 1) {
-            quantity -= 1; // Decrement the quantity, if it's greater than 0
+            quantity -= 1;
         }
         updateQuantityDisplay();
     });

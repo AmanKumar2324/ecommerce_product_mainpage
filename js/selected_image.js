@@ -15,43 +15,49 @@ document.addEventListener('DOMContentLoaded', function() {
         'images/image-product-4.jpg'
     ];
 
-    selectedImage.src = imageSources[0];
-    thumbnails[0].classList.add('selected');
+    let currentIndex = 0;
+
+    // Function to update selected image and thumbnail highlights
+    function updateSelectedImage(index) {
+        selectedImage.src = imageSources[index];
+        thumbnails.forEach(tn => tn.classList.remove('selected'));
+        thumbnails[index].classList.add('selected');
+    }
 
     thumbnails.forEach((thumbnail, index) => {
         thumbnail.addEventListener('click', function() {
-            selectedImage.src = imageSources[index];
-            updateModalImage(index);
-            thumbnails.forEach(tn => tn.classList.remove('selected'));
-            this.classList.add('selected');
+            currentIndex = index;
+            updateSelectedImage(index);
         });
     });
 
     selectedImage.addEventListener('click', function() {
-        modal.style.display = "flex"; // Show the modal
-        modalImage.src = selectedImage.src; // Set the modal image source
+        modal.style.display = "flex";
+        modalImage.src = imageSources[currentIndex];
+        updateModalImage(currentIndex);
     });
 
     closeModal.addEventListener('click', function() {
-        modal.style.display = "none"; // Hide the modal
+        modal.style.display = "none";
     });
-
-    // Add click event to modal thumbnails
+    // Update current index when a modal thumbnail is clicked
     modalThumbnails.forEach((modalThumbnail, index) => {
         modalThumbnail.addEventListener('click', function() {
             updateModalImage(index);
+            currentIndex = index; 
         });
     });
 
     function updateModalImage(index) {
-        modalImage.src = imageSources[index]; // Change the modal image to the selected thumbnail
-        modalThumbnails.forEach(mt => mt.style.border = '2px solid white'); // Reset borders
-        modalThumbnails[index].style.border = '2px solid hsl(26, 100%, 55%)'; // Highlight selected
+         // Change the modal image to the selected thumbnail
+        modalImage.src = imageSources[index];
+        // Reset borders
+        modalThumbnails.forEach(mt => mt.style.border = '2px solid white');
+        // Highlight selected
+        modalThumbnails[index].style.border = '2px solid hsl(26, 100%, 55%)';
     }
 
     // Navigation button functionality
-    let currentIndex = 0; // Keep track of the current image index
-
     function showImage(index) {
         currentIndex = index;
         updateModalImage(currentIndex);
@@ -59,19 +65,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     prevBtn.addEventListener('click', function() {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : imageSources.length - 1; // Loop back to last if at start
+         // Looping back to last if at start
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : imageSources.length - 1;
         showImage(currentIndex);
     });
 
     nextBtn.addEventListener('click', function() {
-        currentIndex = (currentIndex < imageSources.length - 1) ? currentIndex + 1 : 0; // Loop back to first if at end
+        // Looping back to first if at end
+        currentIndex = (currentIndex < imageSources.length - 1) ? currentIndex + 1 : 0;
         showImage(currentIndex);
     });
 
     // Close modal when clicking outside the image
     modal.addEventListener('click', function(event) {
         if (event.target === modal) {
-            modal.style.display = "none"; // Hide the modal
+            modal.style.display = "none";
         }
     });
 });

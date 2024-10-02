@@ -26,12 +26,14 @@
       <h2>sneakers</h2>
       <div class="header_categories">
         <div id="header_tabs">
-        <h4>Collections</h4>
-        <h4>Men</h4>
-        <h4>Women</h4>
-        <h4>About</h4>
-        <h4>Contact</h4>
-        </div>
+          <h4 data-tab="collections">Collections</h4>
+          <h4 data-tab="men">Men</h4>
+          <h4 data-tab="women">Women</h4>
+          <h4 data-tab="about">About</h4>
+          <h4 data-tab="contact">Contact</h4>
+          <span class="underline"></span> <!-- This span will act as the underline -->
+      </div>
+      <script src="js/header_tab_highlighting.js"></script>
         <div class="header_icons">
           <img class="cart_icon" src="images/icon-cart.svg" alt="cart_icon">
           <img class="avatar_icon" src="images/image-avatar.png" alt="image_avatar">
@@ -42,6 +44,16 @@
         </div>
         </div>
     </header>
+    <div id="sideDrawer" class="side_drawer">
+      <button id="closeDrawer">&times;</button>
+      <div class="side_drawer_content">
+          <h4 data-tab="collections">Collections</h4>
+          <h4 data-tab="men">Men</h4>
+          <h4 data-tab="women">Women</h4>
+          <h4 data-tab="about">About</h4>
+          <h4 data-tab="contact">Contact</h4>
+      </div>
+  </div>
   <script src="js/cart_feature.js"></script>
   <script src="js/side_drawer.js"></script>
     <div id="headerspacer"></div>
@@ -55,7 +67,6 @@
             <img class="thumbnail" src="images/image-product-4-thumbnail.jpg" alt="Thumbnail 4">
         </div>
       </div>
-     <!-- Modal for zoomed image -->
       <!-- Modal for zoomed image -->
         <div id="modal" class="modal">
           <span class="close" id="close_modal">&times;</span>

@@ -11,7 +11,7 @@ const productPrice = 125; // Price per product
 function updateCart() {
   const itemQuantity = parseInt(itemQuantityElement.textContent);
   if (itemQuantity > 0) {
-    // Show product details in the cart
+    // Showing product details functionality in the cart
     productQuantityElement.textContent = itemQuantity;
     totalPriceElement.textContent = `$${productPrice * itemQuantity}.00`;
     cartProductList.style.display = 'block';
@@ -24,12 +24,12 @@ function updateCart() {
 // Event listener for the "Add to cart" button
 cartButton.addEventListener('click', (event) => {
   updateCart();
-  event.stopPropagation(); // Prevent this click from propagating to the document
+  event.stopPropagation();
 });
 
 // Event listener to hide the cart when clicking outside
 document.addEventListener('click', (event) => {
-  // If the clicked element is outside the cart or the "Add to cart" button, hide the cart
+  // Functionality to hide the cart dropdown if the clicked element is outside the cart or the "Add to cart" button
   if (!cartProductList.contains(event.target) && !cartButton.contains(event.target)) {
     cartProductList.style.display = 'none';
   }

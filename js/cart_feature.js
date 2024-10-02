@@ -1,10 +1,9 @@
-// Get the cart icon and dropdown
+// Geting the cart icon and dropdown
 const cartIcon = document.querySelector('.cart_icon');
 const cartDropdown = document.getElementById('cartDropdown');
 
-// Add event listener to the cart icon
+// Adding event listener to the cart icon
 cartIcon.addEventListener('click', () => {
-  // Toggle the visibility of the dropdown
   if (cartDropdown.style.display === 'none' || cartDropdown.style.display === '') {
     cartDropdown.style.display = 'block';
   } else {
@@ -12,7 +11,7 @@ cartIcon.addEventListener('click', () => {
   }
 });
 
-// Close the cart dropdown if clicked outside
+// Close functionality of the cart dropdown if clicked outside
 document.addEventListener('click', (event) => {
   if (!cartDropdown.contains(event.target) && !cartIcon.contains(event.target)) {
     cartDropdown.style.display = 'none';
