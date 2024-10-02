@@ -42,16 +42,6 @@
         </div>
         </div>
     </header>
-    <!-- Side drawer -->
-    <!-- <div class="side_drawer">
-      <div class="side_drawer_content">
-          <h4>Collections</h4>
-          <h4>Men</h4>
-          <h4>Women</h4>
-          <h4>About</h4>
-          <h4>Contact</h4>
-      </div>
-  </div> -->
   <script src="js/cart_feature.js"></script>
   <script src="js/side_drawer.js"></script>
     <div id="headerspacer"></div>
@@ -65,6 +55,23 @@
             <img class="thumbnail" src="images/image-product-4-thumbnail.jpg" alt="Thumbnail 4">
         </div>
       </div>
+     <!-- Modal for zoomed image -->
+      <!-- Modal for zoomed image -->
+        <div id="modal" class="modal">
+          <span class="close" id="close_modal">&times;</span>
+          <button id="prevBtn" class="nav-btn">&#10094;</button> <!-- Left Arrow -->
+          <img class="modal-content" id="modal_image" alt="Zoomed Image">
+          <button id="nextBtn" class="nav-btn">&#10095;</button> <!-- Right Arrow -->
+          <div class="modal_image_row">
+              <img class="modal_thumbnail" src="images/image-product-1-thumbnail.jpg" alt="Thumbnail 1">
+              <img class="modal_thumbnail" src="images/image-product-2-thumbnail.jpg" alt="Thumbnail 2">
+              <img class="modal_thumbnail" src="images/image-product-3-thumbnail.jpg" alt="Thumbnail 3">
+              <img class="modal_thumbnail" src="images/image-product-4-thumbnail.jpg" alt="Thumbnail 4">
+          </div>
+        </div>
+
+
+      <script src="js/selected_image.js"></script>
       <div id="right_content">
         <p id="comp_name">SNEAKER COMPANY</p>
         <h1 id="product_tag">Fall Limited Edition Sneakers</h1>
@@ -92,7 +99,6 @@
               <button class="checkout_button">Checkout</button>
             </div>
             <script src="js/cart_product.js"></script>
-            <!-- ---------------------------------------------------- -->
           </div>
         </div>
         <script src="js/quantity_increment_decrement.js"></script>
