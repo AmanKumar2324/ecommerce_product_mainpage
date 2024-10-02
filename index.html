@@ -35,6 +35,10 @@
         <div class="header_icons">
           <img class="cart_icon" src="images/icon-cart.svg" alt="cart_icon">
           <img class="avatar_icon" src="images/image-avatar.png" alt="image_avatar">
+          <div class="cart_dropdown" id="cartDropdown">
+            <h3>Cart</h3>
+            <p>Your cart is empty!</p>
+          </div>
         </div>
         </div>
     </header>
@@ -48,6 +52,7 @@
           <h4>Contact</h4>
       </div>
   </div> -->
+  <script src="js/cart_feature.js"></script>
   <script src="js/side_drawer.js"></script>
     <div id="headerspacer"></div>
     <div class="product_content">
@@ -76,8 +81,21 @@
           <div id="add_to_cart">
             <img id="cart_icon" src="images/icon-cart.svg" alt="cart_icon">
             <p>Add to cart</p>
+            <div class="cart_product_list" style="display: none;" id="cartProductList">
+              <div class="list_tile">
+                <img class="product_thumbnail" src="images/image-product-1-thumbnail.jpg" alt="product_thumbnail">
+                <div class="product_details">
+                  <p class="product_name">Fall Limited Addition Sneakers</p>
+                  <p class="product_price">$125.00 x <span id="productQuantity">1</span> <span class="total_price" style="font-weight: bold;color: black;padding-left: 0.5vw;">$125.00</span></p>
+                </div>
+              </div>
+              <button class="checkout_button">Checkout</button>
+            </div>
+            <script src="js/cart_product.js"></script>
+            <!-- ---------------------------------------------------- -->
           </div>
         </div>
+        <script src="js/quantity_increment_decrement.js"></script>
       </div>
     </div>
     </div>

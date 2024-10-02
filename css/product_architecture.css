@@ -11,10 +11,11 @@
 #left_content{
     display: flex;
     align-items: center;
+    justify-content: start;
     margin: 0 2vw;
-    width: 35%;
+    width: 45%;
     flex-direction: column;
-    height: 80%;
+    height: 90%;
 }
 /* Product_Content: The right side of the product content that is the description of teh product */
 
@@ -22,7 +23,6 @@
     align-items: center;
     margin: 0 2vw;
     /* background-color: rgb(135, 53, 127); */
-    width: 30%;
-    height: 80%;
-    
+    width: 45%;
+    height: 90%;
 }
